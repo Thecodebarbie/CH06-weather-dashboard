@@ -6,3 +6,17 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
+body {
+    background-image: url(../images/backgrnd-blue-waves.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1 {
+    background-color: rgba(83, 114, 240, 0.3); /* Adjust the color and opacity as needed */
+    font-size: 1.75rem;
+    text-align: center;
+    padding: 18px 0;
+    color: #fff;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);/* Adds a shadow effect to create a glassy appearance */
+    backdrop-filter: blur(10px);/* Applies a blur effect to the background, creating a frosted glass effect */
+  }
