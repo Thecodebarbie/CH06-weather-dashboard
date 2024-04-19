@@ -12,7 +12,7 @@
 
 <body>
     <h1>WeatherWise</h1>
-    <aside class="container">
+    <section class="container">
         <section class="weather-background">
             <section class="weather-input">
                 <span id="location-icon" class="material-symbols-outlined">
@@ -23,10 +23,61 @@
                 <button id="btn-search" class="search-btn" type="submit">Search</button>
             </section>
         </section>
-    </aside>
+    </section>
 
-
-    <script src="./assets/js/script.js"></script>
+    <main class="weather-data">
+        <section class="current-weather">
+            <section class="current">
+            <section class="details">
+                <h2>_______ ( ______ )</h2>
+                <h6>Temperature: __°C</h6>
+                <h6>Wind: __ M/S</h6>
+                <h6>Humidity: __%</h6>
+                </section>
+                <figure class="icon">
+                    <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="">
+                    <h4>Moderate Rain</h4>
+                </figure>
+            </section>
+                <section class="days-forecast">
+                    <h2>5 Day Forecast</h2>
+                    <ul class="weather-cards">
+                        <li class="card">
+                            <h3>( ______ )</h3>
+                            <h6>Temp: __C</h6>
+                            <h6>Wind: __ M/S</h6>
+                            <h6>Humidity: __%</h6>
+                        </li>
+                        <li class="card">
+                            <h3>( ______ )</h3>
+                            <h6>Temp: __C</h6>
+                            <h6>Wind: __ M/S</h6>
+                            <h6>Humidity: __%</h6>
+                        </li>
+                        <li class="card">
+                            <h3>( ______ )</h3>
+                            <h6>Temp: __C</h6>
+                            <h6>Wind: __ M/S</h6>
+                            <h6>Humidity: __%</h6>
+                        </li>
+                        <li class="card">
+                            <h3>( ______ )</h3>
+                            <h6>Temp: __C</h6>
+                            <h6>Wind: __ M/S</h6>
+                            <h6>Humidity: __%</h6>
+                        </li>
+                        <li class="card">
+                            <h3>( ______ )</h3>
+                            <h6>Temp: __C</h6>
+                            <h6>Wind: __ M/S</h6>
+                            <h6>Humidity: __%</h6>
+                        </li>
+                    </ul>
+                </section>
+            </main>
+        </section>
+    </main>
+        <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
