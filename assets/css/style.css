@@ -23,7 +23,7 @@ h1 {
     font-size: 1.75rem;
     text-align: center;
     padding: 18px 0;
-    color: #fff;
+    color: #15115e;
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     /* Adds a shadow effect to create a glassy appearance */
     backdrop-filter: blur(10px);
@@ -37,15 +37,15 @@ h1 {
     align-items: center;
     /* Center the container vertically */
     border-radius: 15px;
-    padding: 10px;
-    margin-top: 1px;
+    padding: 20px;
+    margin-top: 75px;
 
 }
 
 .weather-background {
     background-color: rgba(56, 74, 193, 0.308);
     backdrop-filter: blur(5px);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    box-shadow: 0 8px 32px 0 rgba(80, 90, 224, 0.37);
     border-radius: 15px;
     padding: 20px;
     width: 68%;
@@ -57,11 +57,12 @@ h1 {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+
 }
 
 .material-symbols-outlined {
     font-size: 1.5rem;
-    color: #fff;
+    color: #0d0d77;
 }
 
 .city-input {
@@ -92,7 +93,7 @@ h1 {
     border: none;
     border-radius: 4px;
     font-size: 1rem;
-    color: #fff;
+    color: #15115e;
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -235,7 +236,7 @@ h1 {
 
 #city-label {
     font-size: 1.6em;
-    color: #d6e6fe;
+    color: #15115e;
 }
 
 #currentDay {
@@ -274,4 +275,10 @@ h1 {
     .weather-cards {
         flex-direction: column;
     }
+        /* Reset padding for input and search button */
+        .city-input,
+        .search-btn,
+        .search-history button {
+            padding: 2px; /* Adjust as needed */
+        }
 }
