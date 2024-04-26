@@ -3,7 +3,7 @@ const searchBtn = document.getElementById('btn-search');
 const weatherCardsEl = document.getElementById('weather-cards');
 const detailsEL = document.getElementById('details');
 const currentWeatherEl = document.getElementById('current-weather');
-
+const searchHistoryEl = document.getElementById('search-history')
 
 const API_KEY = '0da1455d9ed9eed2bab607b8c3dbad8a'; // API key for OpenWeatherMap API
 
@@ -59,8 +59,10 @@ const getWeatherDetails = (cityName, lat, lon) => {
         // Filter the forecasts to get only one forecast per day
         console.log(data.city.name)
         const savedCitiesArray = JSON.parse(localStorage.getItem('saved-city')) || []
-        savedCitiesArray.push(data.city.name)
-        localStorage.setItem('saved-city', JSON.stringify(savedCitiesArray));
+        const savedCitiesSet = new Set(savedCitiesArray)
+        savedCitiesSet.add(data.city.name)
+        const array = Array.from(savedCitiesSet);
+        localStorage.setItem('saved-city', JSON.stringify(array));
         const uniqueForecastDays = [];
         const fiveDayForecast = data.list.filter(forecast => {
             const forecastDate = new Date(forecast.dt_txt).getDate();
@@ -87,6 +89,20 @@ const getWeatherDetails = (cityName, lat, lon) => {
     });
 }
 
+const searchHistory = () => {
+    const savedCitiesArray = JSON.parse(localStorage.getItem('saved-city')) || []
+    savedCitiesArray.forEach(city => {
+        const newBtn = document.createElement('button')
+        newBtn.textContent = city
+        newBtn.addEventListener('click', function(){
+        cityInput.value = this.textContent
+        searchBtn.click()
+        })
+        searchHistoryEl.appendChild(newBtn)
+    })
+}
+
+
 const fetchCityCoordinates = () => {
     const cityName = cityInput.value.trim(); //Get user entered city name and remove extras. 
     if (!cityName) return; // Return if cityName is empty.
@@ -104,3 +120,5 @@ const fetchCityCoordinates = () => {
 }
 
 searchBtn.addEventListener('click', fetchCityCoordinates)
+
+searchHistory()

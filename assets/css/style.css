@@ -102,7 +102,20 @@ h1 {
 .search-btn:hover {
     background: #73a5f1;
 }
-
+.search-history button {
+    padding: 10px 10px;
+    margin: 5px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    transition: 0.2s ease;
+}
 /*card styles*/
 .weather-data {
     width: 100%;
@@ -229,7 +242,7 @@ h1 {
     width: 300px;
 }
 /* Media Query for mobile responsiveness */
-@media (min-width: 767px) {
+@media (max-width: 767px) {
 
     /* Fix for h1 background */
     h1 {
@@ -256,5 +269,9 @@ h1 {
     .separator {
         flex: auto;
         margin: 0 10px;
+    }
+
+    .weather-cards {
+        flex-direction: column;
     }
 }
