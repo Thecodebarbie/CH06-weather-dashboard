@@ -5,13 +5,13 @@ const weatherCardsEl = document.getElementById('weather-cards')
 const API_KEY = '0da1455d9ed9eed2bab607b8c3dbad8a'; // API key for OpenWeatherMap API
 
 const createWeatherCard = (weatherItem) => {
-    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday','Thursday', 'Friday','Saturday'];
+    const days = ['Monday', 'Tuesday', 'Wednesday','Thursday', 'Friday','Saturday','Sunday'];
     const date = new Date(weatherItem.dt_txt.split(' ')[0]);
     const dayOfWeek = days [date.getDay()];
 
     return `<li class="card">
     <h3 class="day-of-week">${dayOfWeek}</h3>
-    <img src= "https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@2x.png" alt="weather-icon">
+    <img class="forecast-img" src= "https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@2x.png" alt="weather-icon">
     <h4>Weather: ${weatherItem.weather[0].main}</h4>
     <h4>Temp: ${(weatherItem.main.temp - 273.15).toFixed(2)}°C</h4>
     <h4>Wind: ${weatherItem.wind.speed} M/S</h4>
@@ -29,6 +29,7 @@ const getWeatherDetails = (cityName, lat, lon) => {
 
     fetch(WEATHER_API_URL).then(res => res.json()).then(data => {
         // Filter the forecasts to get only one forecast per day
+        console.log(data.list)
         const uniqueForecastDays =[];
         const fiveDayForecast = data.list.filter(forecast => {
             const forecastDate = new Date(forecast.dt_txt).getDate();
@@ -36,7 +37,7 @@ const getWeatherDetails = (cityName, lat, lon) => {
                 return uniqueForecastDays.push(forecastDate);
             }
         });
-
+        fiveDayForecast.shift()
         console.log(fiveDayForecast);
         
         // Clear previous weather data from the weather cards element
