@@ -49,7 +49,8 @@ h1 {
 }
 
 .weather-background {
-    background-color: rgba(13, 29, 95, 0.415);
+    /* background-color: rgba(13, 29, 95, 0.415); */
+    background: rgba(30, 8, 57, 0.258);
     backdrop-filter: blur(5px);
     box-shadow: 0 8px 32px 0 rgba(80, 90, 224, 0.37);
     border-radius: 15px;
@@ -134,11 +135,11 @@ h1 {
 
 .current-weather {
     color: #fff;
-    background: rgba(2, 21, 98, 0.468);
+    background: rgba(2, 21, 98, 0.135);
     border-radius: 5px;
     padding: 20px 70px 20px 20px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+
     padding: 20px 275px 60px 20px;
     display: none;
     
@@ -179,7 +180,8 @@ h1 {
     display: flex;
     padding-top: 9%;
     padding-left: 10%;
-    background: rgba(94, 114, 194, 0.1);
+    /* background: rgba(94, 114, 194, 0.1); */
+    background: rgba(30, 8, 57, 0.467);
     border-radius: 5px;
     padding: 35px 90px 80px 20px;
     backdrop-filter: blur(10px);
@@ -216,9 +218,9 @@ h1 {
     padding: 18px 16px;
     list-style: none;
     width: calc(100% / 5);
-    background: rgba(30,8,57, 0.2);  /* Updated background color for glassmorphism effect */
+    background: rgba(30, 8, 57, 0.467);  /* Updated background color for glassmorphism effect */
     border-radius: 15px;  /* Increased border-radius for a softer look */
-    backdrop-filter: blur(10px);  /* Added blur for glassmorphism effect */
+    backdrop-filter: blur(5px);  /* Added blur for glassmorphism effect */
     border: 1px solid rgba(255, 255, 255, 0.089);  /* Added subtle border */
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);  /* Adjusted shadow */
     padding-top: 5%;
