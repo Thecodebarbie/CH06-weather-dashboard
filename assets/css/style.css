@@ -1,6 +1,10 @@
 /* Import Google font - Open Sans */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
 
+:root {
+    --lav: #d0c3fe;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,21 +13,22 @@
 }
 
 body {
-    background-color: #527db9;
-    /*background-image: url(../images/backgrnd-blue-waves.png);*/
+    /* background-color: #527db9; */
+    background-image: url(../images/art.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    background-position: center;
+    height: 120vh;
 
 }
 
 h1 {
-    background-color: rgba(83, 114, 240, 0.1);
+    background-color: rgba(0, 40, 131, 0.3);
     /* Adjust the color and opacity as needed */
     font-size: 1.75rem;
     text-align: center;
     padding: 18px 0;
-    color: #15115e;
+    color: var(--lav);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     /* Adds a shadow effect to create a glassy appearance */
     backdrop-filter: blur(10px);
@@ -37,18 +42,19 @@ h1 {
     align-items: center;
     /* Center the container vertically */
     border-radius: 15px;
-    padding: 20px;
-    margin-top: 75px;
+    padding: 5px;
+    margin-top: 15px;
+    margin-left: 100px;
 
 }
 
 .weather-background {
-    background-color: rgba(56, 74, 193, 0.308);
+    background-color: rgba(13, 29, 95, 0.415);
     backdrop-filter: blur(5px);
     box-shadow: 0 8px 32px 0 rgba(80, 90, 224, 0.37);
     border-radius: 15px;
-    padding: 20px;
-    width: 68%;
+    padding: 10px;
+    width: 75%;
     /* Full width */
 }
 
@@ -62,7 +68,7 @@ h1 {
 
 .material-symbols-outlined {
     font-size: 1.5rem;
-    color: #0d0d77;
+    color: var(--lav);
 }
 
 .city-input {
@@ -70,18 +76,18 @@ h1 {
     height: 46px;
     outline: none;
     font-size: 1.07rem;
-    color: #1e2c5e;
+    color: var(--lav);
     padding: 0 10px;
     margin: 50px;
     border-radius: 4px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    
 }
 
 .city-input::placeholder {
-    color: #2b388d;
+    color: var(--lav);
     /* New placeholder text color */
 }
 
@@ -93,11 +99,12 @@ h1 {
     border: none;
     border-radius: 4px;
     font-size: 1rem;
-    color: #15115e;
-    background-color: rgba(255, 255, 255, 0.1);
+    color: #d0c3fe;
+    background-color: rgba(133, 102, 205, 0.139);
     backdrop-filter: blur(10px);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     transition: 0.2s ease;
+    
 }
 
 .search-btn:hover {
@@ -127,12 +134,12 @@ h1 {
 
 .current-weather {
     color: #fff;
-    background: rgba(2, 22, 98, 0.7);
+    background: rgba(2, 21, 98, 0.468);
     border-radius: 5px;
     padding: 20px 70px 20px 20px;
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 20px 275px 70px 35px;
+    padding: 20px 275px 60px 20px;
     display: none;
     
     
@@ -236,7 +243,7 @@ h1 {
 
 #city-label {
     font-size: 1.6em;
-    color: #15115e;
+    color: var(--lav);
 }
 
 #currentDay {
