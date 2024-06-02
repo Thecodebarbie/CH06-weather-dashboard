@@ -49,7 +49,7 @@ To run the application locally:
 
 ## Screenshots
 
-![Weather Dashboard Screenshots](./assets/images/weather.png)
+![Weather Dashboard Screenshots](./assets/images/weather-home.png)
 
 ## Credits
 
