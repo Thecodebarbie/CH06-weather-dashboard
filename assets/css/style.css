@@ -45,7 +45,7 @@ h1 {
     padding: 5px;
     margin-top: 15px;
     margin-left: 100px;
-
+    
 }
 
 .weather-background {
@@ -78,7 +78,7 @@ h1 {
     font-size: 1.07rem;
     color: var(--lav);
     padding: 0 10px;
-    margin: 50px;
+    margin: 20px;
     border-radius: 4px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     background-color: rgba(255, 255, 255, 0.1);
@@ -100,7 +100,7 @@ h1 {
     border-radius: 4px;
     font-size: 1rem;
     color: #d0c3fe;
-    background-color: rgba(133, 102, 205, 0.139);
+    background-color: rgba(192, 172, 240, 0.203);
     backdrop-filter: blur(10px);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     transition: 0.2s ease;
@@ -216,7 +216,7 @@ h1 {
     padding: 18px 16px;
     list-style: none;
     width: calc(100% / 5);
-    background: rgba(5, 51, 92, 0.2);  /* Updated background color for glassmorphism effect */
+    background: rgba(30,8,57, 0.2);  /* Updated background color for glassmorphism effect */
     border-radius: 15px;  /* Increased border-radius for a softer look */
     backdrop-filter: blur(10px);  /* Added blur for glassmorphism effect */
     border: 1px solid rgba(255, 255, 255, 0.089);  /* Added subtle border */
@@ -289,3 +289,49 @@ h1 {
             padding: 2px; /* Adjust as needed */
         }
 }
+
+.slide-down {
+    animation-name: slideDown;
+    animation-duration: 2.0s;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Media Query for mobile responsiveness */
+@media (max-width: 576px) {
+
+    body {
+        background-size: cover; 
+        background-repeat: repeat;
+    }
+    .weather-background {
+        width: 60%; /* Adjust width as needed */
+        padding: 5px; /* Adjust padding as needed */
+        margin: 0 auto; /* Center the element horizontally */
+    }
+
+    .container {
+        margin-left: 30px;
+        width: 60px;
+    }
+
+    .current-weather {
+        width: 90%;
+    }
+    .weather-cards .card {
+        width: 20%; /* Adjust the number of cards per row as needed */
+        padding: 140px;
+        
+    }
+    .details {
+        padding-left: 50px;
+    }
+}
+

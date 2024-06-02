@@ -4,6 +4,7 @@ const weatherCardsEl = document.getElementById('weather-cards');
 const detailsEL = document.getElementById('details');
 const currentWeatherEl = document.getElementById('current-weather');
 const searchHistoryEl = document.getElementById('search-history')
+const weatherData = document.querySelector('.weather-data')
 
 const API_KEY = '0da1455d9ed9eed2bab607b8c3dbad8a'; // API key for OpenWeatherMap API
 
@@ -120,5 +121,8 @@ const fetchCityCoordinates = () => {
 }
 
 searchBtn.addEventListener('click', fetchCityCoordinates)
+searchBtn.addEventListener('click', function() {
+    weatherData.classList.toggle('slide-down');
+});
 
 searchHistory()
